@@ -1,0 +1,8 @@
+RAW URL: postgresql+asyncpg://postgres.pxnuylvyrcefeovlpolt:database-password%40@aws-1-ap-south-1.pooler.supabase.com:5432/postgres
+Parsed Driver: postgresql+asyncpg
+Parsed User:   'postgres.pxnuylvyrcefeovlpolt'
+Parsed Pass:   'database-password@'
+Parsed Host:   'aws-1-ap-south-1.pooler.supabase.com'
+Parsed Port:   5432
+Parsed DB:     postgres
+Error parsing: 'charmap' codec can't encode characters in position 2-3: character maps to <undefined>

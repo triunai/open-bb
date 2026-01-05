@@ -1,0 +1,11 @@
+INFO:     Started server process [24696]
+INFO:     Waiting for application startup.
+DEBUG: LIFESPAN START
+2026-01-05T05:44:32.011777Z [info     ] Application starting           environment=prod version=1.0.0
+DEBUG: LIFESPAN YIELD
+INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8000): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+DEBUG: LIFESPAN SHUTDOWN
+2026-01-05T05:44:32.012420Z [info     ] Application shutdown complete 
+INFO:     Application shutdown complete.

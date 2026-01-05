@@ -1,0 +1,213 @@
+{
+  "ofac_venezuela_events": {
+    "name": "OFAC Venezuela Events",
+    "description": "Recent OFAC actions related to Venezuela sanctions, including general licenses and designations. Critical for CVX thesis validation.",
+    "category": "OFAC Scanner",
+    "subCategory": "Venezuela",
+    "type": "table",
+    "endpoint": "ofac/venezuela",
+    "gridData": {
+      "w": 24,
+      "h": 12,
+      "minW": 16,
+      "minH": 8
+    },
+    "data": {
+      "table": {
+        "enableCharts": false,
+        "showAll": true,
+        "columnsDefs": [
+          {
+            "field": "published_date",
+            "headerName": "Date",
+            "cellDataType": "text",
+            "width": 100
+          },
+          {
+            "field": "title",
+            "headerName": "Title",
+            "cellDataType": "text",
+            "width": 400
+          },
+          {
+            "field": "category",
+            "headerName": "Category",
+            "cellDataType": "text",
+            "width": 150
+          },
+          {
+            "field": "is_chevron_related",
+            "headerName": "CVX?",
+            "cellDataType": "text",
+            "width": 80
+          },
+          {
+            "field": "keywords_matched",
+            "headerName": "Keywords",
+            "cellDataType": "text",
+            "width": 200
+          }
+        ]
+      }
+    },
+    "params": [
+      {
+        "paramName": "limit",
+        "value": "50",
+        "label": "Max Results",
+        "type": "text",
+        "show": true,
+        "description": "Maximum events to display"
+      },
+      {
+        "paramName": "chevron_only",
+        "value": "false",
+        "label": "Chevron Only",
+        "type": "text",
+        "show": true,
+        "description": "Filter to Chevron-mentioned events"
+      }
+    ],
+    "refetchInterval": 900000,
+    "staleTime": 300000
+  },
+  "ofac_status": {
+    "name": "OFAC Scanner Status",
+    "description": "Live status of the OFAC polling service with last update time and event counts.",
+    "category": "OFAC Scanner",
+    "subCategory": "Status",
+    "type": "markdown",
+    "endpoint": "ofac/status",
+    "gridData": {
+      "w": 10,
+      "h": 6,
+      "minW": 8,
+      "minH": 4
+    },
+    "refetchInterval": 60000,
+    "staleTime": 30000
+  },
+  "ofac_diff": {
+    "name": "OFAC Changes (24h)",
+    "description": "New OFAC events detected in the last 24 hours. Highlights Venezuela-related items.",
+    "category": "OFAC Scanner",
+    "subCategory": "Alerts",
+    "type": "table",
+    "endpoint": "ofac/diff",
+    "gridData": {
+      "w": 20,
+      "h": 10,
+      "minW": 14,
+      "minH": 6
+    },
+    "data": {
+      "dataKey": "events",
+      "table": {
+        "enableCharts": false,
+        "showAll": true,
+        "columnsDefs": [
+          {
+            "field": "first_seen_at",
+            "headerName": "Detected",
+            "cellDataType": "text",
+            "width": 150
+          },
+          {
+            "field": "title",
+            "headerName": "Title",
+            "cellDataType": "text",
+            "width": 350
+          },
+          {
+            "field": "is_venezuela_related",
+            "headerName": "Venezuela",
+            "cellDataType": "text",
+            "width": 80
+          },
+          {
+            "field": "category",
+            "headerName": "Category",
+            "cellDataType": "text",
+            "width": 140
+          }
+        ]
+      }
+    },
+    "params": [
+      {
+        "paramName": "since_hours",
+        "value": "24",
+        "label": "Hours",
+        "type": "text",
+        "show": true,
+        "description": "Look back window in hours"
+      }
+    ],
+    "refetchInterval": 300000,
+    "staleTime": 60000
+  },
+  "ofac_latest": {
+    "name": "OFAC Latest Events",
+    "description": "Most recent OFAC events across all categories.",
+    "category": "OFAC Scanner",
+    "subCategory": "All",
+    "type": "table",
+    "endpoint": "ofac/latest",
+    "gridData": {
+      "w": 28,
+      "h": 14,
+      "minW": 20,
+      "minH": 10
+    },
+    "data": {
+      "table": {
+        "enableCharts": false,
+        "showAll": true,
+        "columnsDefs": [
+          {
+            "field": "published_date",
+            "headerName": "Date",
+            "cellDataType": "text",
+            "width": 100
+          },
+          {
+            "field": "title",
+            "headerName": "Title",
+            "cellDataType": "text",
+            "width": 450
+          },
+          {
+            "field": "category",
+            "headerName": "Category",
+            "cellDataType": "text",
+            "width": 150
+          },
+          {
+            "field": "is_venezuela_related",
+            "headerName": "Venezuela",
+            "cellDataType": "text",
+            "width": 80
+          },
+          {
+            "field": "is_chevron_related",
+            "headerName": "CVX",
+            "cellDataType": "text",
+            "width": 60
+          }
+        ]
+      }
+    },
+    "params": [
+      {
+        "paramName": "limit",
+        "value": "50",
+        "label": "Max Results",
+        "type": "text",
+        "show": true,
+        "description": "Maximum events to display"
+      }
+    ],
+    "refetchInterval": 600000,
+    "staleTime": 300000
+  }
+}
